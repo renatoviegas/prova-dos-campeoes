@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">46</h2>
+    <section class="flex">
+      <div>
+        <img class="image" src="./img/goblin-morto.png" alt="Goblin morto">
+      </div>
+      <div>
+        <p>
+          Você sobe a escada o mais silenciosamente possível e espreita pelo buraco do teto. Vê um
+          goblin morto estirado no chão, sua mão ainda está segurando uma caixa de prata. Uma pedra
+          foi removida da parede oposta e você presume que a caixa estava escondida atrás dela.
+        </p>
+        <p>Se desejar pegar a caixa de prata, vá para <a href="224.html">224</a>.</p>
+        <p>Se preferir descer a escada e continuar a caminhar pelo túnel, vá para <a href="361.html">361</a>.</p>
+      </div>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(224)">Pegar a caixa de prata</a>
+        <a class="btn waves-effect waves-light" onclick="go(361)">Descer e continuar pelo túnel</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">186</h2>
+    <section>
+      <p>
+        A velha encarquilhada olha para cima, solta uma risada maligna e então joga um pouco do pó
+        no chão. Uma nuvem de fumaça sobe e a velha feiticeira desaparece. De repente há um
+        movimento acima de sua cabeça, e você tem somente tempo de desembainhar sua espada,
+        quando dois Morcegos Vampiros descem para atacar.
+      </p>
+
+      <div>
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+              <p>SORTE <span class="new badge red energy" data-badge-caption="" id="heroLuck">?</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <table class="striped">
+          <thead>
+            <td><span class="new badge green" data-badge-caption="" id="countEnemy">2</span></td>
+            <td></td>
+            <td>HABILIDADE</td>
+            <td>ENERGIA</td>
+            <td>AÇÃO</td>
+          </thead>
+          <tbody>
+            <tr name="enemy-1">
+              <td><img src="img/vampiro-morcego.png" class="enemy-pic-small"></td>
+              <td>MORCEGO VAMPIRO Um</td>
+              <td name="enemy-1-hability">5</td>
+              <td name="enemy-1-energy">5</td>
+              <td name="enemy-1-action">
+                <a class="btn-floating waves-effect waves-light red alive" onclick="decreaseEnergyHero(1);atackGroup('enemy-1')">
+                  <i class="material-icons">my_location</i>
+                </a>
+              </td>
+            </tr>
+            <tr name="enemy-2">
+              <td><img src="img/vampiro-morcego.png" class="enemy-pic-small"></td>
+              <td>MORCEGO VAMPIRO Dois</td>
+              <td name="enemy-2-hability">5</td>
+              <td name="enemy-2-energy">4</td>
+              <td name="enemy-2-action">
+                <a class="btn-floating waves-effect waves-light red alive" onclick="atackGroup('enemy-2')">
+                  <i class="material-icons">my_location</i>
+                </a>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <p>
+        Enfrente um morcego de cada vez. Entretanto, enquanto estiver enfrentando o Morcego
+        Vampiro 1, o segundo vai pendurar-se em suas costas e sugar sangue de seu pescoço. Perca 1
+        ponto a mais de ENERGIA durante cada Série de Ataque com o Morcego Vampiro 1.
+      </p>
+      <p>Se vencer, volte para <a href="142.html">142</a>.</p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" id="action-continuar" onclick="go(142)">Continuar</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

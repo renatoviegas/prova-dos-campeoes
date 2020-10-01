@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">205</h2>
+    <section class="flex">
+      <div>
+        <img class="image" src="./img/demonio-ossos.png" alt="Demônio de ossos">
+      </div>
+      <div>
+        <p>
+          No instante em que levanta a parte de cima do crânio, você é jogado para trás por uma rajada
+          de ar frio. O ar forma trilha enevoada e começa a circular na caverna em alta velocidade. De
+          repente, todos os ossos na caverna começam a chacoalhar. Alguns passam a se mover pelo
+          chão e se agrupar. Eles começam a se erguer e tomar a forma grosseira de um esqueleto. Você
+          observa, hipnotizado, como um pequeno furacão entra na cavidade ocular do crânio.
+          Compreende horrorizado que soltou o espírito morto-vivo de um Demônio de Ossos.
+        </p>
+        <p>Se estiver usando um medalhão, volte para <a href="63.html">63</a>.</p>
+        <p>Se não estiver usando nenhum medalhão, vá para <a href="384.html">384</a>.</p>
+      </div>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-bone-medallion" onclick="go(63)">Está usando o medalhão</a>
+        <a class="btn waves-effect waves-light" name="opt-default" onclick="go(384)">Nenhum medalhão</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

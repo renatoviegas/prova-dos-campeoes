@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">304</h2>
+    <section class="flex">
+      <div>
+        <img class="image" src="./img/ponte-cordas.png" alt="bonecrusher">
+      </div>      
+      <div>
+        <p>
+          Você escuta o barulho de água corrente à distância e logo o túnel termina à beira de um
+          abismo. Uma ponte de corda cruza o precipício e, além dele, o túnel continua em frente. Há
+          uma caixa de madeira amarrada na ponte e um sinal que diz: “Pague em ouro para atravessar”.
+          Uma corda está pendurada na ponte. Olhando para baixo, na escuridão do abismo, você
+          consegue ver apenas uma corredeira bem ao fundo. Você vai:
+        </p>
+        <p>Jogar um objeto de ouro na caixa e atravessar a ponte? Volte para <a href="27.html">27</a></p>
+        <p>Atravessar a ponte sem pagar? Volte para <a href="152.html">152</a></p>
+        <p>Descer pela corda no abismo? Vá para <a href="355.html">355</a></p>
+      </div>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="useItem('golden-ring');go(27)">Jogar um objeto de ouro na caixa e atravessar a ponte</a>
+        <a class="btn waves-effect waves-light" onclick="go(152)">Atravessar a ponte sem pagar</a>
+        <a class="btn waves-effect waves-light" onclick="go(355)">Descer pela corda no abismo</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

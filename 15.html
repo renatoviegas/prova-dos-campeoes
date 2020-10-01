@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="tiraEnergia(3);addItem('golden-ring')">
+  <div class="container">
+    <h2 class="title">15</h2>
+    <section>
+      <p>
+        Com grande coragem e determinação, sua mente vence a ilusão de dor. Cai exausto no chão,
+        quando a dor de seu corpo se esvai. Mas agora você está mentalmente fatigado e sua energia
+        drenada. Perca 3 pontos de ENERGIA. Você se senta e retira a maldita vara. A Rainha Liche
+        permanece silenciosa enquanto tira um anel de ouro de seu dedo e o lança a sua frente. Você
+        não espera para saber seus motivos. Pegando o anel, corre para fora do aposento, para dentro
+        do túnel.
+      </p>
+      <p>Se desejar ir para a direita, vá para <a href="285.html">285</a>.</p>
+      <p>Se desejar ir para a esquerda, passando a junção em forma de T, vá para <a href="227.html">227</a>.</p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(285)">Ir para a direita</a>
+        <a class="btn waves-effect waves-light" onclick="go(227)">Ir para a esquerda</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

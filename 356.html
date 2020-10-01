@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">356</h2>
+    <section>
+      <p>
+        Você não consegue se soltar e é dragado para debaixo da superfície. Como não escuta o canto
+        da Sereia, embaixo d'água, recupera o controle de sua mente. Com repentina determinação,
+        você luta contra o monstro de tentáculos.
+      </p>
+
+      <div class="row div-fight">
+
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+              <p>SORTE <span class="new badge red energy" data-badge-caption="" id="heroLuck">?</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <div class="col s2">
+          <a class="btn halfway-fab waves-effect waves-light red pulse btn-tug alive" id="action-atack"
+            onclick="atackCustom()">
+            <i class="material-icons">my_location</i>
+          </a>
+        </div>
+
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">Tentallus</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/tentallus.png" alt="Tentallus" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="enemyHability">8</span></p>
+              <p>ENERGIA <span class="new badge green" data-badge-caption="" id="enemyEnergy">12</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-enemy">-</div>
+        </div>
+      </div>
+
+      <p>A menos que ganhe no mínimo uma em cada três Séries de Ataque, você se afogará.</p>
+      <p>Se vencer, volte para <a href="236.html">236</a>.</p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" id="action-continuar" onclick="go(236)">Continuar</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+  <script>
+    let serieLoss = 0;
+
+    const atackCustom = () => {
+      const atackResult = atack();
+      serieLoss = atackResult === 'hero' ? 0 : ++serieLoss;
+      !heroIsDead() && _refresh();
+    }
+
+    const _refresh = () => {
+      updateHeroStatus(`Série sem vencer ${serieLoss}`);
+      if (serieLoss == 3) {
+        tiraEnergia(hero.energy);
+        updateHeroStatus('Morto afogado');
+      }
+    }
+
+    window.addEventListener('load', () => _refresh());
+  </script>
+</body>
+
+</html>

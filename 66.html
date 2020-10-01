@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">66</h2>
+    <section>
+      <p>
+        Sua destreza permite que pegue a rede ao mesmo tempo em que evita os braços violentos do
+        Bonecrusher. Mais uma vez você mira e arremessa a rede. Jogue um dado.
+      </p>
+
+      <div class="col s6 m6 dado-div">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-1">
+            </div>
+            <div class="card-action">
+              <a onclick="playDiceRange()" class="link">Lançar dado</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p>Se o resultado for de 1 a 3, vá para <a href="255.html">255</a>.</p>
+      <p>Se o resultado for de 4 a 6, vá para <a href="189.html">189</a>.</p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(255)" name="opt-1">Entre 1 e 3</a>
+        <a class="btn waves-effect waves-light" onclick="go(189)" name="opt-2">Entre 4 e 6</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

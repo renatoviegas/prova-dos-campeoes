@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">364</h2>
+    <section class="flex">
+      <div>
+        <img class="image" src="./img/sereia.png" alt="Sereia">
+      </div>
+      <div>
+        <p>
+          No final dos degraus há uma caverna grande, que está parcialmente submersa numa água
+          suave e borbulhante. Vapor sobe pelo ar frio e você vê uma saída do túnel na parede oposta.
+          Numa rocha no meio do lago subterrâneo está sentada uma linda mulher, cantando uma
+          melodia mágica. Ela é uma Sereia, de uma raça do tipo humano, de sedução maligna. Sua
+          canção é para atraí-lo até ela, para que possa matá-lo com sua faca longa, em sacrifício a seus
+          deuses. Jogue um dado.
+        </p>
+
+        <div class="col s4 dado-div">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-1">
+              </div>
+              <div class="card-action">
+                <a onclick="playDiceRange(3)" class="link">Lançar dado</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p>Se sair 1 ou 2, volte para <a href="103.html">103</a>.</p>
+        <p>Se sair de 3 a 6, volte para <a href="203.html">203</a>.</p>
+
+      </div>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(103)" name="opt-1">Entre 1 e 2</a>
+        <a class="btn waves-effect waves-light" onclick="go(203)" name="opt-2">Entre 3 e 6</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

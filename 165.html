@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">165</h2>
+    <section>
+      <p>Teste sua Sorte.</p>
+
+      <div class="col s6 m6 dado-div">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title">Teste de Sorte</span>
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-1">
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-2">
+            </div>
+            <div class="card-action" id="action-testar-sorte">
+              <a onclick="testarSorte()" class="link">Lançar dados</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p>Se tiver sorte, vá para <a href="389.html">389</a>; se for azarado, vá para <a href="322.html">322</a>.</p>
+  </div>
+  </section>
+
+  <div>
+    <h3 class="subtitle">Ações disponíveis</h3>
+    <div class="center" id="div-actions">
+      <a class="btn waves-effect waves-light" name="opt-1" onclick="go(389)">Tive sorte</a>
+      <a class="btn waves-effect waves-light" name="opt-2" onclick="go(322)">Fui azarado</a>
+    </div>
+  </div>
+  <footer>
+    <hr />
+    <br />
+  </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

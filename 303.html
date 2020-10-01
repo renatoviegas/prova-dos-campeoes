@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">303</h2>
+    <section>
+      <p>
+        Esperando que uma outra criatura hedionda ainda surja, você fica aliviado ao ver o Demônio
+        de Fogo engolfar-se em suas próprias chamas e transformar-se em cinzas. Você anda até a
+        porta, já que estão ambas trancadas com ferrolho. De repente o relógio começa a bater alto e
+        as duas paredes vazias em ambos os lados do aposento começam a se fechar, fazendo um
+        rangido enervante. Você vai:
+      </p>
+      <p>Chamar pelo feiticeiro? Volte para <a href="220.html">220</a></p>
+      <p>Colocar os ponteiros dourados no relógio (se os possuir)? Volte para <a href="81.html">81</a></p>
+      <p>Puxar uma alavanca? Volte para <a href="48.html">48</a></p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(220)">Chamar pelo feiticeiro</a>
+        <a class="btn waves-effect waves-light" name="opt-two-golden-hands"
+          onclick="useItem('two-golden-hands'); go(81)">
+          Colocar os ponteiros dourados no relógio
+        </a>
+        <a class="btn waves-effect waves-light" onclick="go(48)">Puxar uma alavanca</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

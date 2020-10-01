@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">146</h2>
+    <section>
+      <p>
+        Gira a maçaneta da porta e assim que ela abre, você é atacado por uma ratazana. Outras
+        aguardam para substituí-la, caso seja derrotada.
+      </p>
+
+      <div class="row div-fight">
+        <div class="col s4 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+              <p>SORTE <span class="new badge red energy" data-badge-caption="" id="heroLuck">?</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <div class="col s1"></div>
+
+        <div class="col s7 center div-fighter">
+          <table class="striped">
+            <thead>
+              <td><span class="new badge green" data-badge-caption="" id="countEnemy">5</span></td>
+              <td></td>
+              <td>HABILIDADE</td>
+              <td>ENERGIA</td>
+              <td>AÇÃO</td>
+            </thead>
+            <tbody>
+              <tr name="enemy-1">
+                <td><img src="img/ratazana.jpg" class="enemy-pic-small"></td>
+                <td>RATAZANA Um</td>
+                <td name="enemy-1-hability">3</td>
+                <td name="enemy-1-energy">2</td>
+                <td name="enemy-1-action">
+                  <a class="btn-floating waves-effect waves-light red alive" onclick="atackGroupCustom('enemy-1')">
+                    <i class="material-icons">my_location</i>
+                  </a>
+                </td>
+              </tr>
+              <tr name="enemy-2">
+                <td><img src="img/ratazana.jpg" class="enemy-pic-small"></td>
+                <td>RATAZANA Um</td>
+                <td name="enemy-2-hability">12</td>
+                <td name="enemy-2-energy">2</td>
+                <td name="enemy-2-action">
+                  <a class="btn-floating waves-effect waves-light red alive" onclick="atackGroupCustom('enemy-2')">
+                    <i class="material-icons">my_location</i>
+                  </a>
+                </td>
+              </tr>
+              <tr name="enemy-3">
+                <td><img src="img/ratazana.jpg" class="enemy-pic-small"></td>
+                <td>RATAZANA Um</td>
+                <td name="enemy-3-hability">13</td>
+                <td name="enemy-3-energy">2</td>
+                <td name="enemy-3-action">
+                  <a class="btn-floating waves-effect waves-light red alive" onclick="atackGroupCustom('enemy-3')">
+                    <i class="material-icons">my_location</i>
+                  </a>
+                </td>
+              </tr>
+              <tr name="enemy-4">
+                <td><img src="img/ratazana.jpg" class="enemy-pic-small"></td>
+                <td>RATAZANA Um</td>
+                <td name="enemy-4-hability">13</td>
+                <td name="enemy-4-energy">2</td>
+                <td name="enemy-4-action">
+                  <a class="btn-floating waves-effect waves-light red alive" onclick="atackGroupCustom('enemy-4')">
+                    <i class="material-icons">my_location</i>
+                  </a>
+                </td>
+              </tr>
+              <tr name="enemy-5">
+                <td><img src="img/ratazana.jpg" class="enemy-pic-small"></td>
+                <td>RATAZANA Cinco</td>
+                <td name="enemy-5-hability">4</td>
+                <td name="enemy-5-energy">2</td>
+                <td name="enemy-5-action">
+                  <a class="btn-floating waves-effect waves-light red alive" onclick="atackGroupCustom('enemy-5')">
+                    <i class="material-icons">my_location</i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p>
+        Lute com uma ratazana de cada vez. No momento em que perder uma Série de Ataque, vá para <a
+          href="165.html">165</a>.
+      </p>
+      <p>
+        Se conseguir matar todas as ratazanas sem perder uma Série de Ataque sequer, volte para <a
+          href="18.html">18</a>.
+      </p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(165)" name="opt-got-bitten">Foi mordido</a>
+        <a class="btn waves-effect waves-light" onclick="go(18)" id="action-continuar">Continuar</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+  <script>
+    window.addEventListener('load', () => loadEnemy());
+
+    const _countEnemy = document.getElementById("countEnemy");
+
+    const atackGroupCustom = (e) => {
+      const result = atackGroup(e);
+      hero.enemyLive = +_countEnemy.textContent;
+
+      if (result === 'enemy') {
+        enableOptionByName('opt-got-bitten');
+        console.log(hero);
+        disableAllAtackAction();
+      }
+    };
+
+    const loadEnemy = () => {      
+      if (hero.enemyLive === 0) return;
+
+      const _count = +_countEnemy.textContent - hero.enemyLive;
+      _countEnemy.textContent = hero.enemyLive;
+
+      for (let i = 0; i < _count; ++i) {
+        dieEnemy(`enemy-${i + 1}`);
+      }
+
+      enableAtackNextEnemy();
+    }
+  </script>
+</body>
+
+</html>

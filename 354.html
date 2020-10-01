@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">354</h2>
+    <section>
+      <p>
+        O senhor-da-guerra deve ter escapado com vida, por um triz, depois do combate anterior, pois
+        seu corpo está profundamente cortado por garras, e não tem com ele nenhum de seus
+        pertences, exceto a espada. Você decide deixá-lo e volta para o túnel, contudo, esbarra em
+        uma barreira imóvel e invisível. Você acionou uma outra armadilha e não parece haver
+        nenhum jeito de escapar.
+      </p>
+      <p>Se possuir um frasco de pó vermelho, volte para <a href="238.html">238</a>.</p>
+      <p>Se não estiver carregando este item, volte para <a href="330.html">330</a>.</p>      
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-red-powder-bottle" onclick="useItem('red-powder-bottle');go(238)">Possuo frasco do pó vermelho</a>
+        <a class="btn waves-effect waves-light" name="opt-default" onclick="go(330)">Não possuo o frasco</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

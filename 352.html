@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">352</h2>
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Informar a referência</h4>
+        <div>
+          <input id="input-ref" type="number" min="1" max="400" placeholder="Indicar a referência aqui" focus />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="btn waves-effect waves-light" onclick="goRef(352)">Enviar
+          <i class="material-icons right">send</i>
+        </a>
+      </div>
+    </div>
+
+    <section>
+      <p>
+        Sua força é maior que a do homem das cavernas. Levantando-o poderosamente, você o puxa
+        para frente e observa-o cair de cabeça no abismo. Sem se preocupar com a perda de seu servo,
+        o Mestre de Provas fala de novo: “Agora vou fazer uma pergunta. Pense cuidadosamente
+        antes de responder.” Ele aponta para um baú de madeira no meio do aposento e diz: “Dentro
+        deste baú há mais seis baús, e cada um deles contém três baús menores. Quantos baús existem
+        no total?” Se souber a resposta, vá para referência do mesmo número. Se estiver errado ou
+        não souber a resposta, volte para <a href="72.html">72</a>.
+      </p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <button class="btn waves-effect waves-light modal-trigger" data-target="modal1">Indicar a resposta</button>
+        <a class="btn waves-effect waves-light" onclick="go(286)">Não sei</a>
+      </div>
+    </div>
+
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems);
+    });
+  </script>
+</body>
+
+</html>

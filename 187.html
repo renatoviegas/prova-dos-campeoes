@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="addEquipment('shield');addHability(1)">
+  <div class="container">
+    <h2 class="title">187</h2>
+    <section>
+      <p>
+        Você pega o escudo cautelosamente, tomando cuidado para não mexer a cadeira, no caso de
+        haver uma armadilha. Coloca o escudo no braço e fica satisfeito com sua nova peça de
+        armadura. Adicione 1 ponto de HABILIDADE. Agora você vai:
+      </p>
+      <p>Pegar o capacete alado? Volte para <a href="126.html">126</a></p>
+      <p>Tentar decifrar as runas na porta? Volte para <a href="157.html">157</a></p>
+      <p>Abrir a porta e sair do aposento? Vá para <a href="221.html">221</a></p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(126)">Pegar o capacete alado</a>
+        <a class="btn waves-effect waves-light" onclick="go(157)">Decifrar as runas na porta</a>
+        <a class="btn waves-effect waves-light" onclick="go(221)">Abrir a porta e sair do aposento</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

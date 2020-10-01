@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="tiraEnergia(2)">
+  <div class="container">
+    <h2 class="title">225</h2>
+      <section>
+        <p>
+          Você não vê a perna do Ogre, tropeça nela e cai de cabeça na areia. Levanta de um salto e tem
+          que correr o mais rápido possível para alcançar o grupo. Perca 2 pontos de ENERGIA. Você
+          corre voltas e mais voltas na arena, trincando os dentes com mais força a cada vez que pula
+          sobre os carvões em brasa. Depois de vinte minutos, ninguém ficou para trás; então, um dos
+          nórdicos decide correr com maior velocidade, obrigando todos a acelerar. Jogue dois dados,
+          adicionando 3 ao resultado, se você foi açoitado pelos guardas. Se o total for igual ou menor
+          que seus pontos de HABILIDADE, vá para <a href="360.html">360</a>.
+          Se o total for maior, vá para <a href="250.html">250</a>.
+        </p>
+      </section>
+      <div>
+        <h3 class="subtitle">Ações disponíveis</h3>
+        <div class="center" id="div-actions">
+          <a class="btn waves-effect waves-light" name="opt-1" onclick="go(360)">Menor ou igual sua Habilidade</a>
+          <a class="btn waves-effect waves-light" name="opt-2" onclick="go(250)">Maior</a>          
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <br />
+      </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">374</h2>
+    <section>
+      <p>
+        Aporta abre facilmente e você entra em um aposento pequeno. Antes que tenha tempo de
+        olhar em volta, um imenso Cão do Inferno, negro, pula sobre você com chamas saindo da
+        boca cavernosa. Você tem que lutar até a morte com esta besta selvagem.
+      </p>
+
+      <div class="row div-fight">
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+              <p>SORTE <span class="new badge red energy" data-badge-caption="" id="heroLuck">?</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <div class="col s2">
+          <a class="btn halfway-fab waves-effect waves-light red pulse btn-tug alive" id="action-atack"
+            onclick="atack();atackExtra()">
+            <i class="material-icons">my_location</i>
+          </a>
+        </div>
+
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">Cão do Inferno</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/cao-inferno.png" alt="Cão do Inferno" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="enemyHability">7</span></p>
+              <p>ENERGIA <span class="new badge green" data-badge-caption="" id="enemyEnergy">6</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-enemy">-</div>
+        </div>
+      </div>
+
+      <p>
+        Depois de cada Série de Ataque, jogue um dado. Quando sair 1 ou 2, deduza 1 ponto a mais
+        de sua ENERGIA, devido às queimaduras causadas pelas chamas do Cão do Inferno.
+      </p>
+      <p>Se vencer, volte para <a href="52.html">52</a>.</p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" id="action-continuar" onclick="go(52)">Continuar</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+  <script>
+    const atackExtra = () => {
+      if (isDead()) return;
+      const _1d6 = playDices();
+
+      console.log('Atack Extra:', _1d6, _1d6 > 2 ? 'fail' : 'success');
+
+      if (_1d6 > 2) return;
+      decreaseEnergyHero(1);
+      refresh();
+    };
+  </script>
+</body>
+
+</html>

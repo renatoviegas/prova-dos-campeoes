@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">139</h2>
+    <section>
+      <p>
+        Os Orcs estão desarmados, tendo acabado de jogar seu último punhal no rato. Vendo você,
+        eles rosnam de raiva e pegam suas espadas para enfrentá-lo.
+      </p>
+
+      <div class="row div-fight">
+        <div class="col s4 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+              <p>SORTE <span class="new badge red energy" data-badge-caption="" id="heroLuck">?</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <div class="col s1"></div>
+
+        <div class="col s7 center div-fighter">
+          <table class="striped">
+            <thead>
+              <td><span class="new badge green" data-badge-caption="" id="countEnemy">2</span></td>
+              <td></td>
+              <td>HABILIDADE</td>
+              <td>ENERGIA</td>
+              <td>AÇÃO</td>
+            </thead>
+            <tbody>
+              <tr name="enemy-1">
+                <td><img src="img/orc.png" class="enemy-pic-small"></td>
+                <td>ORC Um</td>
+                <td name="enemy-1-hability">6</td>
+                <td name="enemy-1-energy">6</td>
+                <td name="enemy-1-action">
+                  <a class="btn-floating waves-effect waves-light red alive" onclick="atackGroup('enemy-1')">
+                    <i class="material-icons">my_location</i>
+                  </a>
+                </td>
+              </tr>
+              <tr name="enemy-2">
+                <td><img src="img/orc.png" class="enemy-pic-small"></td>
+                <td>ORC Dois</td>
+                <td name="enemy-2-hability">5</td>
+                <td name="enemy-2-energy">6</td>
+                <td name="enemy-2-action">
+                  <a class="btn-floating waves-effect waves-light red alive" onclick="atackGroup('enemy-2')">
+                    <i class="material-icons">my_location</i>
+                  </a>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <p>
+        Enfrente-os um de cada vez no aposento pequeno. Se vencer, vá para <a href="295.html">295</a>.
+      </p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" id="action-continuar" onclick="go(295)">Continuar</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

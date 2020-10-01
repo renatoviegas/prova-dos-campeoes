@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="recuperaEnergia(6);addItem('blue-ink-bottle')">
+  <div class="container">
+    <h2 class="title">8</h2>
+    <section>
+      <p>
+        Assim que você dá uma nova estocada, o elfo cai silencioso, o corpo desprovido de vida. A
+        língua o solta e se retrai para a garganta cavernosa. Você arrasta o elfo para fora da boca,
+        embora não haja mais nada que possa fazer por ele agora. Você está começando a se
+        perguntar o que fazer, quando, de repente, os olhos do elfo se abrem. Ele sussurra em seu
+        último sopro de vida: “Obrigado por tentar me salvar. Você não tinha que o fazer, porque nós
+        dois sabemos que apenas uma pessoa pode sair daqui viva. Agora não vai ser eu. Pegue o que
+        tenho e caminhe para dentro da boca. Se conseguir derrotar a coisa horrenda que me
+        surpreendeu, acho que é o caminho certo.” Seus olhos se fecham novamente e ele suspira pela
+        última vez. Você encontra um pote de pasta cinza que tem um aroma picante, num saco
+        amarrado na cintura dele. Sabendo como são os elfos,você está certo de que a pasta tem
+        propriedades de cura. Então decide esfregar o conteúdo do pote em seus ferimentos. A pasta
+        surte o efeito desejado. Adicione 6 pontos à sua ENERGIA. Você também acha no saco uma
+        garrafa pequena de tinta azul, que coloca dentro de sua bolsa. Pensa sobre o que o elfo lhe
+        disse.
+      </p>
+      <p>Se desejar caminhar para dentro da boca, vá para <a href="306.html">306</a>.</p>
+      <p>Se preferir sair do aposento e continuar pelo corredor, vá para <a href="138.html">138</a>.</p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(306)">Caminhar para dentro da boca</a>
+        <a class="btn waves-effect waves-light" onclick="go(138)">Sair do aposento</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

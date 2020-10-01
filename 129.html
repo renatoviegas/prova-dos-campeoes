@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">129</h2>
+    <section>
+      <p>
+        O túnel se estende por apenas mais vinte metros antes que termine à beira de um precipício
+        escuro. Você joga uma pedra nele e a escuta bater no fundo alguns segundos depois. Os lados
+        do precipício são muito lisos para descer e seria tolice pular.
+      </p>
+      <p>Se estiver carregando uma corda em seu ombro e desejar descer por ela, vá para <a href="264.html">264</a>.</p>
+      <p>Se não desejar descer ou estiver impossibilitado de fazê-lo, deve voltar pelo túnel até a última junção em
+        forma de T (vá para <a href="351.html">351</a>).</p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-rope" onclick="useItem('rope');go(264)">Descer pela corda</a>
+        <a class="btn waves-effect waves-light" onclick="go(351)">Voltar pelo túnel</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

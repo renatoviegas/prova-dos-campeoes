@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container center">
+    <h1 class="title-main">Carregando o jogo salvo</h1>
+    <div class="center flex row div-main">
+      <div class="col s4 div-main div-image">
+        <img class="image-cover" src="./img/hero.jpg" alt="Prova dos Campeões">
+      </div>
+
+      <p>
+        <label>
+          <input type="checkbox" class="filled-in" onclick="clickRed()" id="chkTest" checked="checked" />
+          <span>Red</span>
+        </label>
+      </p>
+
+
+      <div class="col s8 div-main div-actions-loadgame">
+        <div class="col s12">
+          <div class="row">
+            <form action="#">
+              <div class="file-field input-field">
+                <div class="btn">
+                  <span>File</span>
+                  <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text">
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="row">
+            <a class="btn waves-effect waves-light" onclick="initGame()">Começar
+              <i class="material-icons right">play_arrow</i>
+            </a>
+          </div>
+
+          <div class="row">
+            <a class="btn waves-effect waves-light grey" href="index.html">Sair
+              <i class="material-icons right">exit_to_app</i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/load-game.js"></script>
+  <script>
+    const clickRed = () => {
+      const check = document.getElementById('chkTest');
+      
+      if (true) {
+        console.log(check.value);
+        check.value = false;
+      }
+    }
+  </script>
+</body>
+
+</html>

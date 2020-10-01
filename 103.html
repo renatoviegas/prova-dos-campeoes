@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">103</h2>
+    <section>
+        <p>
+          O canto da Sereia surte seu efeito, antes que você possa cobrir seus ouvidos. Seduzido pela
+          voz alegre, você entra no lago morno e nada em direção à rocha. Mas o lago também é o lar
+          de um monstro gigante em forma de lula, com tentáculos de cinco metros de comprimento.
+          Das profundezas sombrias do lago, ele o vê nadando na superfície e desliza silenciosamente
+          para cima e envolvê-lo com seus tentáculos. De repente você sente alguma coisa puxando seu
+          pé e então vê o monstro gigante do lago, quando ele desponta. Jogue dois dados.
+        </p>
+
+        <div class="col s6 m6 dado-div">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <span class="card-title">Teste de Habilidade</span>
+                <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-1">
+                <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-2">
+              </div>
+              <div class="card-action" id="action-testar-habilidade">
+                <a onclick="habilityTest()" class="link">Lançar dados</a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <p>Se o total for igual ou menor que seus pontos de HABILIDADE, volte para <a href="191.html">191</a>.</p>
+        <p>Se o total for maior, vá para <a href="356.html">356</a>.</p>        
+      </section>
+  
+      <div>
+        <h3 class="subtitle">Ações disponíveis</h3>
+        <div class="center" id="div-actions">
+          <a class="btn waves-effect waves-light" name="opt-1" onclick="go(191)">Menor ou igual sua Habilidade</a>
+          <a class="btn waves-effect waves-light" name="opt-2" onclick="go(356)">Maior</a>          
+        </div>
+      </div>        
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

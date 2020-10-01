@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">124</h2>
+    <section>
+      <p>
+        Assim que abre a caixa, seu corpo todo parece esticar como se estivesse sendo sugado por
+        uma fechadura. Você é consumido pelo terror, quando compreende que está em um buraco
+        negro. Não consegue sentir nada à sua volta - paredes, teto ou chão. Você é prisioneiro na
+        caixa de armadilhas e o anão, que a havia aberto antes, agora está livre. Seu rosto está
+        estampado na fivela da caixa e não pode escapar, a menos que algum outro tolo a abra. Teste
+        sua Sorte e adicione 3 ao total.
+      </p>
+
+      <div class="col s6 m6 dado-div">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title">Teste de Sorte</span>
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-1">
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-2">
+            </div>
+            <div class="card-action" id="action-testar-sorte">
+              <a onclick="testarSorte()" class="link">Lançar dados</a>
+            </div>
+          </div>
+        </div>
+      </div>      
+      
+      <p>
+        Se tiver sorte, vá para <a href="399.html">399</a>; se for azarado, volte para <a href="24.html">24</a>.
+      </p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-1" onclick="go(399)">Tive sorte</a>
+        <a class="btn waves-effect waves-light" name="opt-2" onclick="go(24)">Fui azarado</a>        
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

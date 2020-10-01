@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">259</h2>
+    <section>
+      <p>
+        O chifre que você está soprando é usado pelos Xoroas para alertar uns aos outros que o perigo
+        está se aproximando. Mais quatro Xoroas vêm correndo para dentro da câmara, armados com
+        lanças pequenas e dardos. Eles se aproximam para vingar o guerreiro caído.
+      </p>
+
+      <div>
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+              <p>SORTE <span class="new badge red energy" data-badge-caption="" id="heroLuck">?</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <table class="striped">
+          <thead>
+            <td><span class="new badge green" data-badge-caption="" id="countEnemy">4</span></td>
+            <td></td>
+            <td>HABILIDADE</td>
+            <td>ENERGIA</td>
+            <td>AÇÃO</td>
+          </thead>
+          <tbody>
+            <tr name="enemy-1">
+              <td><img src="img/guerreiro-xoroa.png" alt="Guerreiro Xoroa 1" class="enemy-pic-small"></td>
+              <td>GUERREIRO XOROA Um</td>
+              <td name="enemy-1-hability">10</td>
+              <td name="enemy-1-energy">10</td>
+              <td name="enemy-1-action">
+                <a class="btn-floating waves-effect waves-light red alive" onclick="atackGroup('enemy-1')">
+                  <i class="material-icons">my_location</i>
+                </a>
+              </td>
+            </tr>
+            <tr name="enemy-2">
+              <td><img src="img/guerreiro-xoroa.png" alt="Guerreiro Xoroa 2" class="enemy-pic-small"></td>
+              <td>GUERREIRO XOROA Dois</td>
+              <td name="enemy-2-hability">9</td>
+              <td name="enemy-2-energy">11</td>
+              <td name="enemy-2-action">
+                <a class="btn-floating waves-effect waves-light red alive" onclick="atackGroup('enemy-2')">
+                  <i class="material-icons">my_location</i>
+                </a>
+            </tr>
+            <tr name="enemy-3">
+              <td><img src="img/guerreiro-xoroa.png" alt="Guerreiro Xoroa 3" class="enemy-pic-small"></td>
+              <td>GUERREIRO XOROA Três</td>
+              <td name="enemy-3-hability">10</td>
+              <td name="enemy-3-energy">11</td>
+              <td name="enemy-3-action">
+                <a class="btn-floating waves-effect waves-light red alive" onclick="atackGroup('enemy-3')">
+                  <i class="material-icons">my_location</i>
+                </a>
+            </tr>
+            <tr name="enemy-4">
+              <td><img src="img/guerreiro-xoroa.png" alt="Guerreiro Xoroa 4" class="enemy-pic-small"></td>
+              <td>GUERREIRO XOROA Quatro</td>
+              <td name="enemy-4-hability">10</td>
+              <td name="enemy-4-energy">10</td>
+              <td name="enemy-4-action">
+                <a class="btn-floating waves-effect waves-light red alive" onclick="atackGroup('enemy-4')">
+                  <i class="material-icons">my_location</i>
+                </a>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Se de alguma forma conseguir derrotar todos os Xoroas, volte para <a href="14.html">14</a>.</p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(14)" id="action-continuar">Continuar</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

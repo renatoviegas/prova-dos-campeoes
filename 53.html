@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="addEquipment('purple-cloak');recuperaSorte(1)">
+  <div class="container">
+    <h2 class="title">53</h2>
+    <section>
+      <p>
+        O capuz é feito de um material especial, que tem propriedades resistentes ao fogo. Adicione 1
+        ponto à sua SORTE.
+      </p>
+      <p>Se desejar olhar agora nas quarta e quinta urnas, vá para <a href="147.html">147</a>.</p>
+      <p>Se preferir prosseguir, vá para <a href="69.html">69</a>.</p>      
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(147)">Olhar a quarta e quinta urna</a>
+        <a class="btn waves-effect waves-light" onclick="go(69)">Prosseguir</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

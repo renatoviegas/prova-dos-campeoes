@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">329</h2>
+    <section>
+      <p>
+        Logo você escuta som de patas batendo no chão de pedra. O som ecoa pelo túnel e então vê
+        uma forma emergindo da escuridão. Montado em um esqueleto branco de cavalo encontra-se
+        um Esqueleto armado, com uma coroa sobre o crânio. Tendo visto você, o Rei Esqueleto
+        espora seu cavalo assombrado, o põe em galope e brande sua espada para cima. Você tem que
+        enfrentar o assombrado montado.
+      </p>
+
+      <div class="row div-fight">
+
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <div class="col s2">
+          <a class="btn halfway-fab waves-effect waves-light red pulse btn-tug alive" id="action-atack"
+            onclick="atack(_damageHero)">
+            <i class="material-icons">my_location</i>
+          </a>
+        </div>
+
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">Rei Esqueleto</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/rei-esqueleto.png" alt="Rei Esqueleto" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="enemyHability">9</span></p>
+              <p>ENERGIA <span class="new badge green" data-badge-caption="" id="enemyEnergy">7</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-enemy">-</div>
+        </div>
+      </div>
+
+      <p>
+        Armas de fio, como espadas e punhais, causam pouco mal a Esqueletos. A menos que possua
+        um martelo para enfrentá-lo, você apenas vai fazê-lo perder 1 ponto de ENERGIA durante
+        cada Série de Ataque bem-sucedida. Se vencer, volte para <a href="209.html">209</a>.
+      </p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" id="action-continuar" onclick="go(209)">Continuar</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+  <script>
+    let _damageHero = 1;
+    window.addEventListener('load', () => {
+      const has = hasEquipment('hammer');
+      _damageHero = has ? 2 : 1;
+      const divStatusHero = document.getElementById('status-hero');
+      divStatusHero.textContent = (has ? 'Possui ' : 'Não possui') + ' Martelo';
+    })
+  </script>
+</body>
+
+</html>

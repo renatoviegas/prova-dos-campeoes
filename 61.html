@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="recuperaEnergia(4)">
+  <div class="container">
+    <h2 class="title">61</h2>
+    <section>
+      <p>
+        Um viva ressoa quando seu oponente cai no chão. Você escuta guardas entrarem na arena;
+        logo sua venda é removida e suas armas são desamarradas de seus pulsos. Você é levado para
+        sua cela, compreendendo que apenas o sulista está entre você e a vitória. Nessa noite é bem
+        alimentado e curativos são feitos em seus ferimentos. Adicione 4 pontos à sua ENERGIA. De
+        manhã o ritual familiar de ser levado para a arena é repetido, mas desta vez você é colocado
+        face a face com o sulista. Um punhal e um soco inglês são fornecidos a cada um. O combate
+        final da arena começa ao sinal de Lord Carnuss.
+      </p>
+
+      <div class="row div-fight">
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+              <p>SORTE <span class="new badge red energy" data-badge-caption="" id="heroLuck">?</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <div class="col s2">
+          <a class="btn halfway-fab waves-effect waves-light red pulse btn-tug alive" id="action-atack"
+            onclick="atack()">
+            <i class="material-icons">my_location</i>
+          </a>
+        </div>
+
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">Sulista</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/sulista.png" alt="Sulista" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="enemyHability">10</span></p>
+              <p>ENERGIA <span class="new badge green" data-badge-caption="" id="enemyEnergy">10</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-enemy">-</div>
+        </div>
+      </div>
+
+      <p>Se vencer, vá para <a href="261.html">261</a>.</p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" id="action-continuar" onclick="go(261)">Continuar</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <hr />
+    <br />
+  </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

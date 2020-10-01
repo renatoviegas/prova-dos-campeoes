@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">26</h2>
+    <section class="flex">
+      <div>
+        <img class="image" src="./img/cachorro-duas-cabecas.png" alt="cachorro de duas cabeças">
+      </div>
+      <div>
+        <p>
+          Assim que você toca a maçaneta, escuta latidos e rugidos altos. Você abre a porta e vê um
+          cachorro preto, nojento, de duas cabeças, se esticando na coleira presa a um gancho, na parede
+          oposta de um aposento pequeno. Seus olhos são vermelhos e a saliva pinga continuamente de
+          suas bocas cheias de dentes pontiagudos. No aposento está uma bagunça terrível, com tudo
+          quebrado ou mastigado pelo cão. Numa prateleira presa à parede atrás dele, há uma caixa de
+          metal. Você vai:
+        </p>
+        <p>Atacar o cachorro? <a href="294.html">294</a></p>
+        <p>Soprar seu apito de madeira (se tiver um)? <a href="67.html">67</a></p>
+        <p>Fechar a porta e caminhar para o corredor? <a href="379.html">379</a></p>
+      </div>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(294)">Atacar</a>
+        <a class="btn waves-effect waves-light" name="opt-wooden-whistle" onclick="useItem('wooden-whistle');go(67)">Soprar seu apito de madeira</a>
+        <a class="btn waves-effect waves-light" onclick="go(379)">Fechar a porta e caminhar para o corredor</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

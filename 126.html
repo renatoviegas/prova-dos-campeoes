@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="addEquipment('winged-helmet')">
+  <div class="container">
+    <h2 class="title">126</h2>
+    <section>
+      <p>
+        Você pega o magnífico capacete e o coloca em sua cabeça. Segundos depois, uma armadura
+        balança para frente e, então, anda em sua direção aos solavancos com sua clava erguida no ar.
+      </p>
+      <p>Se desejar enfrentar a armadura animada, volte para <a href="10.html">10</a>.</p>
+      <p>Se preferir correr para a porta da parede oposta, vá para <a href="281.html">281</a>.</p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(10)">Enfrentar a armadura animada</a>
+        <a class="btn waves-effect waves-light" onclick="go(281)">Correr para a porta da parede oposta</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

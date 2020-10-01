@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">250</h2>
+    <section>
+      <p>
+        O peso das pedras o está enfraquecendo lentamente e quando dá o próximo pulo sobre os
+        carvões em brasa, você torce seu tornozelo ao aterrissar e cai na areia. Você observa os outros
+        avançarem enquanto se levanta. Eles estão mais da metade do circuito à sua frente, enquanto
+        você manca atrás deles, tentando alcançá-los. Jogue um dado. Se o resultado for de 1 a 5,
+        volte para <a href="86.html">86</a>. Se o resultado for 6, volte para <a href="202.html">202</a>.
+      </p>
+    </section>
+
+    <div class="col s6 m6 dado-div">
+      <div class="card horizontal">
+        <div class="card-stacked">
+          <div class="card-content">
+            <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-1">
+          </div>
+          <div class="card-action">
+            <a onclick="playDiceRange(6)" class="link">Lançar dado</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-1" onclick="go(86)">Entre 1 e 5</a>
+        <a class="btn waves-effect waves-light" name="opt-2" onclick="go(202)">Saiu 6</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

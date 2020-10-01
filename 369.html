@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">369</h2>
+    <section>
+      <p>
+        “As três coisas nas quais fui instruído para testá-lo são: força, inteligência e habilidade de
+        luta. Se falhar em qualquer um destes testes, não terá permissão de continuar a Prova dos
+        Campeões. Nós insistimos em um vencedor valoroso. O primeiro teste será um cabo-de-guerra contra
+        um homem das cavernas.” A porta atrás do Mestre de Provas se abre e um homem imenso, com cabelos
+        compridos, vestido de peles esfarrapadas, entra a passos largos no aposento.
+        O Mestre de Provas bate no chão à sua frente com sua vara e ele se abre para
+        revelar um abismo escuro. Ele então ordena que o homem das cavernas pegue uma corda
+        grossa no armário. Ele lhe dá uma ponta e manda que a puxem, um de cada lado do abismo.
+        Ele conta até três e então grita: “Puxem!” A força do homem das cavernas é incrível e você
+        trinca os dentes e puxa o mais forte possível. O homem das cavernas tem 7 de
+        HABILIDADE. Solucione o cabo-de-guerra como faria num combate normal, mas não reduza
+        sua ENERGIA, já que não são infligidos ferimentos. Tome nota de quem vence em cada Série de Ataque.
+      </p>
+
+      <div class="row div-fight">
+
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>SERIES <span class="new badge red" data-badge-caption="" id="heroSeries">0</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <div class="col s2">
+          <a class="btn halfway-fab waves-effect waves-light red pulse btn-tug alive" id="action-tug-of-war"
+            onclick="tugOfWar()">
+            <i class="material-icons">settings_ethernet</i>
+          </a>
+        </div>
+
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">Homem das Cavernas</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/homem-das-cavernas.jpg" alt="Homem das Cavernas" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="enemyHability">7</span></p>
+              <p>SERIES <span class="new badge red" data-badge-caption="" id="enemySeries">0</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-enemy">-</div>
+        </div>
+
+      </div>
+
+      <p>Se for o primeiro a vencer quatro Séries de Ataque, volte para <a href="352.html">352</a>.</p>
+      <p>Se o homem das cavernas for o primeiro a vencer quatro Séries de Ataque, volte para <a href="99.html">99</a>.
+      </p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-1" onclick="go(352)">Você venceu</a>
+        <a class="btn waves-effect waves-light" name="opt-2" onclick="go(99)">O Homem das cavernas venceu</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+  <script defer>
+    window.addEventListener('load', () => initTugOfWar());
+
+    let seriesWinHero = 0;
+    let seriesWinEnemy = 0;
+
+    const initTugOfWar = () => {
+      seriesWinHero = 0;
+      seriesWinEnemy = 0;
+      refreshHero(hero);
+    };
+
+    const isFinishedTugOfWar = () => seriesWinHero >= 4 || seriesWinEnemy >= 4;
+
+    const tugOfWar = () => {
+      if (isFinishedTugOfWar()) return;
+
+      const enemyHability = parseInt(
+        document.getElementById('enemyHability').textContent
+      );
+      enemyPowerAtack = playDices(2) + enemyHability;
+      heroPowerAtack = playDices(2) + getHabilityHero();
+
+      if (heroPowerAtack > enemyPowerAtack) seriesWinHero++;
+      if (heroPowerAtack < enemyPowerAtack) seriesWinEnemy++;
+
+      console.log('Hero atack:', heroPowerAtack, 'Enemy atack:', enemyPowerAtack);
+
+      refreshTug();
+    };
+
+    const refreshTug = () => {
+      const heroSeries = document.getElementById('heroSeries');
+      const enemySeries = document.getElementById('enemySeries');
+
+      heroSeries.textContent = seriesWinHero;
+      enemySeries.textContent = seriesWinEnemy;
+
+      isFinishedTugOfWar() && finishTugOfWar();
+    };
+
+    const finishTugOfWar = () => {
+      disableAllAtackAction();
+
+      if (seriesWinHero === 4) {
+        enableOptionByName('opt-1');
+        return;
+      }
+
+      enableOptionByName('opt-2');
+    };        
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">58</h2>
+    <section>
+      <p>
+        Caminhando, você pisa numa pedra que aciona uma armadilha escondida. Barras de ferro
+        caem de buracos do teto à sua frente e atrás de você. Você se esforça para levantá-las, porém
+        não consegue movê-las e são muito grossas para vergá-las.
+      </p>
+      <p>Se estiver carregando uma lima na sua bolsa, vá para <a href="106.html">106</a>.</p>
+      <p>Se não possuir uma lima, vá para <a href="396.html">396</a>.</p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-iron-file" onclick="useItem('iron-file');go(106)">Usar a
+          lima</a>
+        <a class="btn waves-effect waves-light" name="opt-default" onclick="go(396)">Não tenho a lima</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

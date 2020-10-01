@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">87</h2>
+    <section>
+      <div>
+        <p>Em total escuridão, suas mãos trêmulas tateiam dentro da bolsa à procura do frasco.</p>
+        <p>Se você tiver mais de um frasco em sua bolsa, vá para <a href="365.html">365</a>.</p>
+        <p>Se possui somente o frasco contra veneno, vá para <a href="331.html">331</a>.</p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-1" onclick="go(365)">Tenho mais de um frasco</a>
+        <a class="btn waves-effect waves-light" name="opt-2" onclick="go(331)">Só tenho o frasco contra veneno</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+  <script>
+    window.addEventListener('load', () => {    
+      const hasTwoBottle = hasItem('anti-poison-bottle') && hasItem('red-powder-bottle');
+      hasTwoBottle ? enableOptionByName('opt-1') : enableOptionByName('opt-2');
+    })
+  </script>
+</body>
+
+</html>

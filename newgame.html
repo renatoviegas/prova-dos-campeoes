@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container center">
+    <h1 class="title-main">Criando o Personagem</h1>
+    <div class="center flex row div-main">
+      <div class="col s4 div-main div-image">
+        <img class="image-cover" src="./img/hero.jpg" alt="Prova dos Campeões">
+      </div>
+      <div class="col s8 div-main">
+        <div class="col s12">
+          <div class="row">
+            <div class="col s12">
+              <h3 class="subtitle center">Pontos a distribuir</h3>
+              <div class="div-points">
+                <span class="center points" id="points">4</span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="name" type="text" class="validate" value="Hero">
+              <label for="name">Nome</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s4">
+              <input id="hability" type="number" class="validate" onchange="changeAttribute()"/>
+              <label for="hability">Habilidade</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="energy" type="number" class="validate" max="24" step="2" onchange="changeAttribute()" />
+              <label for="energy">Energia</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="luck" type="number" class="validate" max="12" onchange="changeAttribute()" />
+              <label for="luck">Sorte</label>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 div-actions-newgame">
+          <div class="row">
+            <a class="btn waves-effect waves-light btn-init" onclick="initGame()">Começar
+              <i class="material-icons right">play_arrow</i>
+            </a>
+          </div>
+          <div class="row">
+            <a class="btn waves-effect waves-light grey" href="index.html">Sair
+              <i class="material-icons right">exit_to_app</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/new-game.js"></script>
+</body>
+
+</html>

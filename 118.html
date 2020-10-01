@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">118</h2>
+    <section>
+      <p>Você desembainha sua espada e se aproxima do imenso aracnídeo preto.</p>
+
+      <div class="row div-fight">
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+              <p>SORTE <span class="new badge red energy" data-badge-caption="" id="heroLuck">?</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <div class="col s2">
+          <a class="btn halfway-fab waves-effect waves-light red pulse btn-tug alive" id="action-atack"
+            onclick="atackCustom()">
+            <i class="material-icons">my_location</i>
+          </a>
+        </div>
+
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">Aranha Gigante</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/aranha-gigante.png" alt="Aranha Gigante" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="enemyHability">7</span></p>
+              <p>ENERGIA <span class="new badge green" data-badge-caption="" id="enemyEnergy">8</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-enemy">-</div>
+        </div>
+      </div>
+
+      <p>Se não derrotar a Aranha Gigante em cinco Séries de Ataque, você também ficará enrolado em sua teia.</p>
+      <p>
+        Se isto acontecer, tome nota dos pontos atuais de HABILIDADE e ENERGIA da
+        Aranha Gigante e então volte para <a href="64.html">64</a>.
+      </p>
+      <p>
+        Se conseguir matar a Aranha Gigante em cinco ou menos Séries de Ataques, vá para <a href="348.html">348</a>.
+      </p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-1" onclick="go(64)" nomodify>Ficou enrolado na teia?</a>
+        <a class="btn waves-effect waves-light" name="opt-2" onclick="go(348)">Matou a aranha?</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      if (hero.facts.giantSpider) {
+        enemy.energy = hero.facts.giantSpider
+        refresh();
+      }
+    })
+
+    let serie = 0;
+
+    const atackCustom = () => {
+      serie++;
+      const atackResult = atack();
+      updateHeroStatus(`Série de Ataque [${serie}]`);
+      if (serie >= 5 && !isDead()) {
+        disableAllAtackAction();
+        hero.facts.giantSpider = enemy.energy;
+        enableOptionByName('opt-1');
+      }
+
+      if (enemyIsDead()) delete hero.facts.giantSpider;
+    }
+  </script>
+</body>
+
+</html>

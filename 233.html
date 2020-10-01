@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="addEquipment('elven-boots');addHability(1)">
+  <div class="container">
+    <h2 class="title">233</h2>
+    <section>
+      <p>
+        As botas cabem-lhe perfeitamente e quando você anda pela caverna com elas, sente-se ágil e
+        confiante. Você está calçando Botas Élficas de Velocidade.
+      </p>
+      <p>Adicione 1 ponto a sua HABILIDADE.</p>
+      <p>Se desejar investigar em volta para achar mais alguma coisa, vá para <a href="272.html">272</a>.</p>
+      <p>Se desejar voltar para o túnel, volte para <a href="150.html">150</a>.</p>      
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(272)">Investigar em volta</a>
+        <a class="btn waves-effect waves-light" onclick="go(150)">Voltar para o túnel</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

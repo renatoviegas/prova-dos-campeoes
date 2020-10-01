@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">127</h2>
+    <section>
+      <p>
+        Antes que possa respirar de novo, o corpo do Diabinho de Fogo começa uma metamorfose
+        diante de seus olhos. Uma criatura alta de pele vermelha com asas de couro enormes, chifres e
+        cascos fendidos, surge à sua frente. Labaredas saem de suas narinas e ele carrega um chicote
+        numa das mãos e uma espada incandescente na outra. Agora você deve enfrentar o vil Demônio de Fogo.
+      </p>
+
+      <div class="row div-fight">
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+              <p>SORTE <span class="new badge red energy" data-badge-caption="" id="heroLuck">?</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <div class="col s2">
+          <a class="btn halfway-fab waves-effect waves-light red pulse btn-tug alive" id="action-atack"
+            onclick="atackCustom()">
+            <i class="material-icons">my_location</i>
+          </a>
+        </div>
+
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">Demônio de Fogo</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/demonio-de-fogo.jpeg" alt="Demônio de Fogo" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="enemyHability">10</span></p>
+              <p>ENERGIA <span class="new badge green" data-badge-caption="" id="enemyEnergy">10</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-enemy">-</div>
+        </div>
+      </div>
+
+      <p>
+        O Demônio de Fogo não ataca somente com sua espada incandescente. Jogue um dado extra
+        para cada Série de Ataque.
+      </p>
+      <p>Quando sair 1 ou 2, o fogo de suas narinas vai queimá-lo e causar uma perda de 2 pontos de ENERGIA.</p>
+      <p>Quando sair 3 ou 4, seu chicote vai fustigá-lo e causar uma perda de 1 ponto de ENERGIA.</p>
+      <p>Quando sair 5 ou 6, nem o fogo nem o chicote vão atingi-lo.</p>
+
+      <p>Se vencer, vá para <a href="303.html">303</a>.</p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" id="action-continuar" onclick="go(303)">Continuar</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+  <script defer>
+
+    const atackCustom = () => {
+      atack();
+      if (isDead()) return;
+      const _1d6 = playDices();
+
+      const _damage = _1d6 >= 5 ? 0 : _1d6 >= 3 ? 1 : 2;
+      console.log(`Atack Extra [${_1d6}]: ${_damage} dano`);
+
+      decreaseEnergyHero(_damage);
+      refresh();
+    };
+
+  </script>
+</body>
+
+</html>

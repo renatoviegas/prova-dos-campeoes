@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="tiraHabilidade(1);tiraEnergia(1, false)">
+  <div class="container">
+    <h2 class="title">216</h2>
+    <section>
+      <p>
+        Você aterrissa pesadamente no fundo do abismo, passando de raspão por uma estaca afiada
+        fincada no chão. Seu tornozelo está terrivelmente deslocado, mas por sorte nenhum osso está
+        quebrado. Perca 1 ponto de HABILIDADE e 1 ponto de ENERGIA. Você olha para cima e vê
+        a Rainha Liche olhando-o fixamente. Ela joga alguma coisa para baixo, dentro do abismo, que
+        cai com barulho no fundo. É uma luva de ferro e você entende que não há como escapar do
+        desafio da Rainha Liche. Os lados do abismo são escarpados o suficiente para que possa
+        escalar. Quando chega ao topo, ela manda que vista a luva que trouxe consigo. Você
+        compreende que não há alternativa. Tão logo sua mão entra na luva, é tomada por uma dor
+        terrível, que rapidamente se espalha por todo seu corpo. Sente como se estivesse sendo
+        esmagado por um torno gigante e começa a gritar em agonia, aterrorizado. Jogue três dados.
+      </p>
+
+      <div class="col s6 m6 dado-div">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title">Teste de Habilidade</span>
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-1">
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-2">
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-3">
+            </div>
+            <div class="card-action" id="action-testar-habilidade">
+              <a onclick="habilityTest(3)" class="link">Lançar dados</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p>Se o total for igual ou menor que seus pontos de HABILIDADE, volte para <a href="15.html">15</a>.</p>
+      <p>Se o total for maior, volte para <a href="80.html">80</a>.</p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-1" onclick="go(15)">Menor ou igual sua Habilidade</a>
+        <a class="btn waves-effect waves-light" name="opt-2" onclick="go(80)">Maior</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

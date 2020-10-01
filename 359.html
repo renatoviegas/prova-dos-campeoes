@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="recuperaEnergia(5);addHability(1)">
+  <div class="container">
+    <h2 class="title">359</h2>
+    <section>
+      <p>
+        Você logo tem lama até sua cintura e, brevemente, ela chega a seu pescoço. Mas,
+        vagarosamente, o chão sobe e você passa além do que, atualmente, é uma poça de lama
+        vulcânica. A lama rica em minerais tem propriedades curativas fabulosas.
+        Adicione 5 pontos à sua ENERGIA e 1 ponto à sua HABILIDADE.
+        Chega um momento em que a passagem se abre em uma câmara, que está acesa por rochas brilhantes.
+        Você percebe que a passagem atravessa a câmara e sai pela parede do fundo.
+        No centro do aposento há um elefante, com quase um metro de altura, esculpido em pedra-sabão.
+        Debaixo de sua barriga, você vê uma rachadura bem fina de um compartimento escondido, 
+        mas não sabe como abri-lo. Então vê outra rachadura na metade da tromba de elefante e 
+        deduz que se a tromba for puxada, o compartimento pode se abrir.
+        Se desejar puxar a tromba do elefante, volte para <a href="60.html">60</a>.
+        Se preferir seguir a passagem, volte para <a href="263.html">263</a>.
+      </p>      
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(60)">Puxar a tromba do elefante</a>
+        <a class="btn waves-effect waves-light" onclick="go(263)">Seguir a passagem</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

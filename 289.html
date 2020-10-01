@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">289</h2>
+    <section>
+      <p>
+        Ao continuar a caminhar, você não vê as fileiras de pinos venenosos, que se estendem da
+        passagem. Suas mãos esticadas são espetadas pelas pontas afiadas dos pinos. O veneno
+        funciona rapidamente e você se sente violentamente doente.
+      </p>
+      <p>Se possuir o frasco anti-veneno, volte para <a href="87.html">87</a>.</p>
+      <p>Se não possuir este item, volte para <a href="231.html">231</a>.</p>      
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-anti-poison-bottle" onclick="go(87)">Usar frasco anti-veneno</a>
+        <a class="btn waves-effect waves-light" name="opt-default" onclick="go(231)">Não tenho frasco anti-veneno</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

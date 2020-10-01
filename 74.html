@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">74</h2>
+    <section class="flex">
+      <div>
+        <img class="image" src="./img/verme-sangue.png" alt="Verme de Sangue">
+      </div>
+      <div>
+        <p>
+          Você começa a levantar a grade, de repente, ela voa pelo ar, empurrada por uma criatura
+          poderosa e hedionda vinda de baixo. Uma cabeça grotesca surge num corpo comprido e
+          segmentado. Não tem olhos, mas uma boca de ventosa, cercada por ganchos afiados, a
+          criatura parece muito com um verme gigante grudento. Atraído pelo calor de seu corpo, o
+          Verme de Sangue extende seu corpo para frente, numa tentativa de se enganchar na sua carne.
+          Jogue um dado.
+        </p>
+        <div class="col s6 m6 dado-div">
+          <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-1">
+              </div>
+              <div class="card-action">
+                <a onclick="playDiceRange()" class="link">Lançar dado</a>
+              </div>
+            </div>
+          </div>
+        </div>        
+        <p>Se sair de 1 a 3, vá para <a href="325.html">325</a>.</p>
+        <p>Se sair de 4 a 6, vá para <a href="234.html">234</a>.</p>
+      </div>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(325)" name="opt-1">Entre 1 e 3</a>
+        <a class="btn waves-effect waves-light" onclick="go(234)" name="opt-2">Entre 4 e 6</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

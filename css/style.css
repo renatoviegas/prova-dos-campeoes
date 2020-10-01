@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Glass+Antiqua&family=Josefin+Slab&family=Macondo+Swash+Caps&family=MedievalSharp&family=New+Rocker&family=Pirata+One&family=Roboto&family=Roboto+Mono&family=Special+Elite&display=swap');
+
+p {
+  font-family: 'Glass Antiqua', cursive;
+  font-family: 'MedievalSharp', cursive;
+  font-family: 'Special Elite', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Macondo Swash Caps', cursive;
+  font-family: 'Pirata One', cursive;
+  font-family: 'New Rocker', cursive;
+  font-family: 'Josefin Slab', serif;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+.title-main {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'MedievalSharp', cursive;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.div-main {
+  margin: 0;
+  padding: 0 !important; 
+}
+
+.div-main .div-image {
+  margin-right: 15px;
+}
+
+.div-actions-newgame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.div-actions-loadgame {
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.div-actions-loadgame button {
+  display: block;
+}
+
+.image-cover {
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+}
+
+.div-points {
+  border: 1px solid lightgray;
+  font-family: 'Special Elite', cursive;
+  font-size: 1.5rem;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.btn-init {
+  margin-right: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'MedievalSharp', cursive;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'MedievalSharp', cursive;
+  text-align: left;
+}
+
+.image {
+  width: auto;
+  height: 500px;
+  margin-right: 20px;
+}
+
+.div-fight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.div-fighter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid lightgray;
+  padding: 0 !important;
+}
+
+.div-person-name {
+  font-size: 1.5rem;
+  font-family: 'New Rocker', cursive;
+  border-bottom: 2px dotted lightgray;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.div-person-data {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.div-person-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid lightgray;
+  height: 100%;
+}
+
+.div-person-attributes {
+  padding-left: 15px;
+  margin: 0 !important;
+}
+
+.person-picture {
+  width: 120px;
+  height: 170px;
+  margin: auto;
+}
+
+.div-result {
+  height: 30px;
+  border-top: 1px solid lightgray;
+  align-items: center;
+  vertical-align: middle;
+  font-family: 'Macondo Swash Caps', cursive;
+  font-size: 1.3rem;
+}
+
+.btn-tug {
+  display: block;
+}
+
+.dado-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+  width: 100%;
+}
+
+.dado-picture {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.enemy-pic-small {
+  width: 80px;
+  height: 50px;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;  
+}
+
+.link {
+  cursor: pointer;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.status {
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  color: green;
+}
+
+.invisivel {
+  display: none;
+}

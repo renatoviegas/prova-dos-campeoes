@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="tiraHabilidade(1); tiraEnergia(2)">
+  <div class="container">
+    <h2 class="title">380</h2>
+    <section>
+      <div>
+        <p>
+          É seu braço da espada que está profundamente cortado. Perca 1 ponto de HABILIDADE e 2
+          pontos de ENERGIA.
+        </p>
+
+        <p>Se desejar ficar onde está e continuar a girar sua maça, volte para <a href="159.html">159</a>.</p>
+        <p>Se desejar dar um passo à sua esquerda, volte para <a href="120.html">120</a>.</p>        
+      </div>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(159)">Ficar onde está e girar a maça</a>
+        <a class="btn waves-effect waves-light" onclick="go(120)">Dar um passo a esquerda</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

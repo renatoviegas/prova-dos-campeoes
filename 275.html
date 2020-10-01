@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">275</h2>
+      <section class="flex">
+        <div>
+          <img class="image" src="./img/bonecrusher.png" alt="Bonecrusher">
+        </div>        
+        <div>
+          <p>
+            Um guarda abre a porta da arena e você pisa na areia quente, que agora está manchada de
+            sangue dos combatentes caídos. De repente, uma outra porta na parede da arena se abre e sai um
+            temível Bonecrusher, sua pele de couro duro brilhando ao sol. Sua cabeça horrenda é
+            pequena e possui dois olhos estreitos, quase cegos, um nariz achatado e gavinhas penduradas
+            em sua boca tensa. Seu tronco, contudo, é maciço e seus braços compridos são temerosamente
+            poderosos.
+          </p>
+          <p>Se for enfrentá-lo com uma espada larga e escudo, volte para <a href="56.html">56</a>.</p>
+          <p>Se for enfrentá-lo com um tridente e rede, volte para <a href="175.html">175</a>.</p>          
+        </div>
+      </section>
+      <div>
+        <h3 class="subtitle">Ações disponíveis</h3>
+        <div class="center" id="div-actions">
+          <a class="btn waves-effect waves-light" name="opt-sword-shield" onclick="useItem('sword-shield');go(56)">Espada e escudo</a>
+          <a class="btn waves-effect waves-light" name="opt-trident-network" onclick="useItem('trident-network');go(175)">Tridente e rede</a>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <br />
+      </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

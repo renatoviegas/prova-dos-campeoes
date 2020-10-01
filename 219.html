@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="tiraHabilidade(1);refreshHero(hero);updateHeroStatus('Habilidade -1 (temporário)')">
+  <div class="container">
+    <h2 class="title">219</h2>
+    <section>
+      <p>
+        A temperatura dentro do aposento abandonado é bem mais baixa que no túnel. Você começa a
+        tremer de frio no momento em que entra no aposento, e pode ver sua expiração pairando
+        como nuvens no ar frio. Na parede oposta do aposento, você vê uma entrada grande no túnel,
+        da qual pode ouvir o som de passos vagarosos, vindo em sua direção, e um som sibilante,
+        baixo e longo. Você mantém sua posição, espada em punho, quando uma fera hedionda entra
+        no aposento. Ela tem um estômago verde protuberante, como um imenso sapo, e uma cabeça
+        grotesca, disforme, amparada por um pescoço inchado. Tem uma boca redonda grande, cujos
+        lábios gordos roxos emolduram fileiras de dentes afiados: a fera corta sua presa em fatias e
+        então suga-lhe as entranhas. Intestinos frescos são a refeição predileta do Garra de Frio, e ele
+        tem a intenção de comer os seus como punição por ter entrado em seu covil.
+      </p>
+      <div class="row div-fight">
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+              <p>SORTE <span class="new badge red energy" data-badge-caption="" id="heroLuck">?</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <div class="col s2">
+          <a class="btn halfway-fab waves-effect waves-light red pulse btn-tug alive" id="action-atack"
+            onclick="atack()">
+            <i class="material-icons">my_location</i>
+          </a>
+        </div>
+
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">Garra de Frio</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/garra-de-frio.png" alt="Garra de Frio" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="enemyHability">10</span></p>
+              <p>ENERGIA <span class="new badge green" data-badge-caption="" id="enemyEnergy">11</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-enemy">-</div>
+        </div>
+      </div>
+      <p>
+        Conforme a fera vil anda com dificuldade em sua direção, a temperatura parece cair ainda
+        mais. Reduza 1 ponto de seus pontos de HABILIDADE somente para este confronto.
+      </p>
+      <p>Se vencer, vá para <a href="252.html">252</a>.</p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" id="action-continuar" onclick="addHability(1);go(252)">Continuar</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

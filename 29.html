@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">29</h2>
+    <section class="row flex">
+      <div>
+        <p>
+          Você reúne toda sua energia mental e, de alguma forma, dá um jeito de romper o domínio que
+          o Demônio de Ossos exerce sobre sua mente. Segurando firme no punho de sua espada com
+          ambas as mãos, você dá um passo à frente, determinado a destruir seu oponente maligno.
+        </p>
+
+        <div class="row div-fight">
+          <div class="col s5 center div-fighter">
+            <div class="div-person-name">HERO</div>
+            <div class="row div-person-data">
+              <div class="col s5 div-person-picture">
+                <img src="/img/hero.jpg" class="person-picture">
+              </div>
+              <div class="col s7 div-person-attributes">
+                <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+                <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+                <p>SORTE <span class="new badge red energy" data-badge-caption="" id="heroLuck">?</span></p>
+              </div>
+            </div>
+            <div class="div-result" id="status-hero">-</div>
+          </div>
+
+          <div class="col s2">
+            <a class="btn halfway-fab waves-effect waves-light red pulse btn-tug alive" id="action-atack"
+              onclick="atackCustom()">
+              <i class="material-icons">my_location</i>
+            </a>
+          </div>
+
+          <div class="col s5 center div-fighter">
+            <div class="div-person-name">Demônio de Ossos</div>
+            <div class="row div-person-data">
+              <div class="col s5 div-person-picture">
+                <img src="/img/demonio-ossos.png" alt="Demônio de Ossos" class="person-picture">
+              </div>
+              <div class="col s7 div-person-attributes">
+                <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="enemyHability">10</span></p>
+                <p>ENERGIA <span class="new badge green" data-badge-caption="" id="enemyEnergy">8</span></p>
+              </div>
+            </div>
+            <div class="div-result" id="status-enemy">-</div>
+          </div>
+        </div>
+
+        <p>Antes de cada Série de Ataque, jogue um dado.</p>
+        <p>Se sair 1 ou 2, você não vai conseguir resistir ao ataque mental do Demônio de Ossos e vai ficar novamente
+          paralisado de medo, vá para <a href="265.html">265</a>.</p>
+        <p>Se sair de 3 a 6, vai continuar a resistir a seu ataque mental e lutar normalmente.</p>
+
+        <p>Se vencer o combate, vá para <a href="326.html">326</a>.</p>
+      </div>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="go(265)" name="opt-paralyzed">Ficou paralisado</a>
+        <a class="btn waves-effect waves-light" onclick="go(326)" name="opt">Continuar</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+  <script>
+    const atackCustom = () => {
+      const _1d6 = playDices();
+      console.log('Atack Mental:', _1d6);
+      
+      if (_1d6 > 2) {
+        atack();
+        enemyIsDead() && disableOptionByName('opt-paralyzed');
+        return;
+      }
+
+      updateHeroStatus('Paralisado');
+      disableAtackAction(actionAtack);
+      enableOptionByName('opt-paralyzed');
+    };
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">238</h2>
+    <section>
+      <p>
+        Lembrando do desaparecimento da velha encarquilhada que espalhou pó no chão, você
+        resolve fazer o mesmo numa tentativa desesperada de escapar. Desarrolha o frasco e esvazia o
+        conteúdo no chão. Sobe fumaça e você se sente, repentinamente; como se estivesse girando
+        em um buraco negro. Segundos depois, encontra-se de pé em um aposento pequeno e vazio.
+        Há uma porta de ferro que está trancada e não tem maçaneta.
+      </p>
+      <p>Se possuir uma chave de ferro, volte para <a href="125.html">125</a>.</p>
+      <p>Se não possuir uma chave, vá para <a href="266.html">266</a>.</p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-iron-key" onclick="useItem('iron-key');go(125)">Tenho uma chave de ferro</a>
+        <a class="btn waves-effect waves-light" name="opt-default" onclick="go(266)">Não tenho uma chave de ferro</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>  
+</body>
+
+</html>

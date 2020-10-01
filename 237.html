@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">237</h2>
+    <section>
+      <p>
+        Você desaba, de costas na parede da cela, depois da luta feroz com o oriental, e cai no sono de
+        exaustão. Quando todos os sobreviventes estão reunidos na arena pela manhã, restam somente
+        doze de vocês. O primeiro teste do dia envolve uma máquina mortífera; vai precisar de
+        reações-relâmpago e nervos de aço para sobreviver a ela. Ela é feita de um poste fixado a uma
+        base pesada. Duas lâminas afiadas saem de ambos os lados do poste, uma na altura da cabeça
+        e outra na altura do tornozelo. Um dos escravos é colocado parado ao lado do poste, que é
+        prontamente girado por um dos guardas. O escravo tem que se agachar para baixo de uma das
+        lâminas e pular a outra, alternadamente, a fim de evitar ser brutalmente cortado. Você vai ser
+        o último e até agora restam nove sobreviventes; os outros dois tiveram suas gargantas
+        cortadas. Você fica ao lado do poste, adrenalina correndo em suas veias. O guarda gira o poste
+        e você começa a pular e a se agachar. Jogue dois dados.
+      </p>
+
+      <div class="col s6 m6 dado-div">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <span class="card-title">Teste de Habilidade</span>
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-1">
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-2">
+            </div>
+            <div class="card-action" id="action-testar-habilidade">
+              <a onclick="habilityTest()" class="link">Lançar dados</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p>Se o total for igual ou menor que seus pontos de HABILIDADE, volte para <a href="94.html">94</a>.</p>
+      <p>Se o total for maior, vá para <a href="324.html">324</a>.</p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-1" href="94.html">Menor ou igual a Habilidade</a>
+        <a class="btn waves-effect waves-light" name="opt-2" href="324.html">Maior</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

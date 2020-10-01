@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="recuperaEnergia(4);addFact('eatSaltyMeat')">
+  <div class="container">
+    <h2 class="title">184</h2>
+    <section>
+      <p>
+        A carne seca salgada é dura, porém saborosa. Você a mastiga e a engole em pedaços grandes,
+        tamanha é sua fome. Adicione 4 pontos de ENERGIA. Chega a um ponto em que sente que já
+        comeu o bastante.
+      </p>
+      <p>Você pode comer o pão, caso não o tenha feito ainda (volte para <a href="57.html">57</a>).</p>
+      <p>
+        De qualquer maneira não há mais nada que possa fazer, a não ser subir de volta às escadas (vá para <a
+          href="305.html">305</a>).
+      </p>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-1" onclick="go(57)">Comer o pão</a>
+        <a class="btn waves-effect waves-light" name="opt-2" onclick="go(305)">Subir de volta às escadas</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+  <script>
+    window.addEventListener('load', () => enableOptionByName(hero.facts.eatBread ? 'opt-2' : 'opt-1'));
+  </script>
+</body>
+
+</html>

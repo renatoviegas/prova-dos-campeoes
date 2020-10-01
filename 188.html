@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body onload="recuperaEnergia(6);addHability(2)">
+  <div class="container">
+    <h2 class="title">188</h2>
+    <section>
+      <p>
+        Há uma grande multidão reunida na saída para o labirinto. Quando eles o vêem aparecer, mal
+        podem acreditar em seus olhos e irrompem em aplauso arrebatador, dando vivas com o topo
+        de suas vozes.
+      </p>
+      <p>
+        Uma mensagem é enviada ao Barão Sukumvit, que não esperava que ninguém saísse do labirinto mortal.
+      </p>
+      <p>
+        Porém, você nota Lord Carnuss de pé na multidão, com um rosto sem expressão, cercado por seus guardas.
+        O ódio cresce dentro de você, mas está muito exausto para pensar em vingar os escravos da
+        Ilha de Sangue por agora. Dois homens correm para frente e o levantam em seus ombros;
+        carregam-no para a praça central onde a cerimônia da vitória será realizada.
+        Você é carregado para uma plataforma e sentado numa cadeira
+        acolchoada, enquanto vários servos o atendem, fazendo curativos em seus ferimentos e dando
+        poções especiais, curativas, para beber.
+      </p>
+      <p>Adicione 2 pontos à sua HABILIDADE e 6 pontos à sua ENERGIA.</p>
+      <p>
+        O Barão Sukumvit aparece afinal para presenteá-lo com 20.000 Moedas de
+        Ouro. Você se levanta para receber o prêmio, contudo Lord Carnuss sobe os degraus da
+        plataforma para intervir. Parecendo surpreso, Barão Sukumvit pergunta porque seu irmão
+        odiado veio a Fang. Com uma voz cheia de desprezo, Carnuss replica: “Porque o guerreiro
+        que está à sua frente é meu escravo e está me representando. Eu pegarei o prêmio, se não se
+        importa!” Barão Sukumvit vira-se para você e diz: “Este ano há um prêmio adicional para o
+        vitorioso - qualquer desejo será concedido. Guerreiro, o que deseja?” Sua chance chegou e
+        responde que é seu desejo lutar com Lord Carnuss e vingar os escravos que morreram na Ilha
+        de Sangue. Lord Carnuss tenta recusar o desafio, porém a multidão em polvorosa começa a
+        vaiar e não o permite sair da plataforma. Ele se vira para encará-lo, desembainha sua espada e
+        diz: “Que seja então!”
+      </p>
+
+      <div class="row div-fight">
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">HERO</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/hero.jpg" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="heroHability">?</span></p>
+              <p>ENERGIA <span class="new badge green energy" data-badge-caption="" id="heroEnergy">?</span></p>
+              <p>SORTE <span class="new badge red energy" data-badge-caption="" id="heroLuck">?</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-hero">-</div>
+        </div>
+
+        <div class="col s2">
+          <a class="btn halfway-fab waves-effect waves-light red pulse btn-tug alive" id="action-atack"
+            onclick="atack()">
+            <i class="material-icons">my_location</i>
+          </a>
+        </div>
+
+        <div class="col s5 center div-fighter">
+          <div class="div-person-name">Lord Carnuss</div>
+          <div class="row div-person-data">
+            <div class="col s5 div-person-picture">
+              <img src="/img/lord-carnuss.png" alt="Lord Carnuss" class="person-picture">
+            </div>
+            <div class="col s7 div-person-attributes">
+              <p>HABILIDADE <span class="new badge blue" data-badge-caption="" id="enemyHability">10</span></p>
+              <p>ENERGIA <span class="new badge green" data-badge-caption="" id="enemyEnergy">10</span></p>
+            </div>
+          </div>
+          <div class="div-result" id="status-enemy">-</div>
+        </div>
+      </div>
+
+      <p>Se vencer, vá para <a href="400.html">400</a>.</p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" id="action-continuar" onclick="go(400)">Continuar</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

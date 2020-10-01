@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">200</h2>
+    <section>
+      <p>
+        O Mestre de Provas sente sua agressão e usa mágica para bombardeá-lo com blocos de
+        madeiras, que são arremessados no ar em sua direção, em alta velocidade. Todos os seis
+        blocos encontram o alvo e esmagam seu corpo, enquanto tenta defender-se com as mãos.
+        Jogue um dado e deduza o resultado de seus pontos de ENERGIA.
+      </p>
+
+      <div class="col s6 dado-div">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-1">
+            </div>
+            <div class="card-action">
+              <a onclick="lancar1D6DeduzirEnergia()" class="link">Lançar dado</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        Se sobreviver à surra, decide chamar Noy e dizer-lhe que vai obedecê-lo.
+        Os blocos de madeira mediatamente voam para longe e pairam de novo em um círculo,
+        em volta do Mestre de Provas. Vá para <a href="369.html">369</a>.
+      </p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" id='action-continuar' onclick="go(369)">Continuar</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">128</h2>
+    <section>
+      <p>
+        Você pisa na laje que ativa a besta. O virote voa pelo túnel estreito e penetra em seu corpo. Jogue um dado.
+      </p>
+
+      <div class="col s6 dado-div">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-1">
+            </div>
+            <div class="card-action">
+              <a onclick="playDiceRange(2, 4)" class="link">Lançar dado</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p>Se sair 1, vá para <a href="382.html">382</a>.</p>
+      <p>Se sair 2 ou 3, vá para <a href="145.html">145</a>.</p>
+      <p>Se sair 4, 5 ou 6, volte para <a href="39.html">39</a>.</p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-1" onclick="go(382)">Saiu 1</a>
+        <a class="btn waves-effect waves-light" name="opt-2" onclick="go(145)">Entre 2 e 3</a>
+        <a class="btn waves-effect waves-light" name="opt-3" onclick="go(39)">Entre 4 a 6</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+  </script>
+
+</body>
+
+</html>

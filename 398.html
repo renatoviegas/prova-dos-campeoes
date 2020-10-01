@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">398</h2>
+    <section class="flex">
+      <div>
+        <img class="image" src="./img/divindada-cabeca-cachorro.png" alt="bonecrusher">
+      </div>      
+      <div>
+        <p>
+          Em uma reentrância arqueada na parede esquerda, você vê um grande ídolo de bronze de uma
+          divindade humana, com cabeça de cachorro. Suas mãos estão com as palmas viradas para
+          cima e há uma inscrição embaixo dele, que diz: “Um presente de ouro o deixará passar, a
+          menos que queira morrer por gás”. Você nota que as narinas da cabeça de cachorro estão
+          abertas.
+        </p>
+        <p>
+          Se puder e desejar colocar um item de ouro na palma da mão do ídolo, volte para <a href="299.html">299</a>.
+        </p>
+        <p>Se preferir arriscar passar por ele, volte para <a href="193.html">193</a>.</p>
+      </div>
+    </section>
+
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" onclick="useItem('golden-ring');go(299)">Colocar um item de ouro na palma da mão do ídolo</a>
+        <a class="btn waves-effect waves-light" onclick="go(193)">Passar por ele</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

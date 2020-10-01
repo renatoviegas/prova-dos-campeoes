@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Prova dos Campeões</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="title">301</h2>
+    <section>
+      <p>
+        Seu pé esquerdo engancha no fio da armadilha, que aciona uma flecha de um buraco na
+        parede. Jogue um dado.
+      </p>
+
+      <div class="col s6 dado-div">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <img src="/img/d6.jpg" class="dado-picture" id="dadoD6-1">
+            </div>
+            <div class="card-action">
+              <a onclick="playDiceRange(4, 6)" class="link">Lançar dado</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p>Se sair de 1 a 3, volte para <a href="83.html">83</a>.</p>
+      <p>Se sair 4 ou 5, volte para <a href="30.html">30</a>.</p>
+      <p>Se sair 6, volte para <a href="280.html">280</a>.</p>
+    </section>
+    <div>
+      <h3 class="subtitle">Ações disponíveis</h3>
+      <div class="center" id="div-actions">
+        <a class="btn waves-effect waves-light" name="opt-1" onclick="go(83)">Entre 1 e 3</a>
+        <a class="btn waves-effect waves-light" name="opt-2" onclick="go(30)">Entre 4 e 5</a>
+        <a class="btn waves-effect waves-light" name="opt-3" onclick="go(280)">Saiu 6</a>
+      </div>
+    </div>
+    <footer>
+      <hr />
+      <br />
+    </footer>
+  </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>

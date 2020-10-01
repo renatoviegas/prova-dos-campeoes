@@ -1,0 +1,11 @@
+{
+  "name": "Renato",
+  "habilityInitial": 11,
+  "hability": 11,
+  "initialEnergy": 20,
+  "energy": 20,
+  "initialLuck": 10,
+  "luck": 10,
+  "items": [],
+  "currentStep": 0
+}
