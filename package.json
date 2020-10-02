@@ -1,0 +1,22 @@
+{
+  "name": "prova-dos-campeoes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renatoviegas/prova-dos-campeoes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renatoviegas/prova-dos-campeoes/issues"
+  },
+  "homepage": "https://github.com/renatoviegas/prova-dos-campeoes#readme",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
